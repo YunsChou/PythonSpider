@@ -14,9 +14,11 @@ BOT_NAME = 'Scrapy1_doubanTop250'
 SPIDER_MODULES = ['Scrapy1_doubanTop250.spiders']
 NEWSPIDER_MODULE = 'Scrapy1_doubanTop250.spiders'
 
+FEED_URI = '/Users/yuns/Desktop/Python/PythonSpider/doubanTop250.csv'
+FEED_FORMAT = 'CSV'
 
 # Crawl responsibly by identifying yourself (and your website) on the user-agent
-#USER_AGENT = 'Scrapy1_doubanTop250 (+http://www.yourdomain.com)'
+USER_AGENT = 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_8_3) AppleWebKit/536.5 (KHTML, like Gecko) Chrome/19.0.1084.54 Safari/536.5'
 
 # Obey robots.txt rules
 ROBOTSTXT_OBEY = True
@@ -27,7 +29,7 @@ ROBOTSTXT_OBEY = True
 # Configure a delay for requests for the same website (default: 0)
 # See http://scrapy.readthedocs.org/en/latest/topics/settings.html#download-delay
 # See also autothrottle settings and docs
-#DOWNLOAD_DELAY = 3
+DOWNLOAD_DELAY = 2
 # The download delay setting will honor only one of:
 #CONCURRENT_REQUESTS_PER_DOMAIN = 16
 #CONCURRENT_REQUESTS_PER_IP = 16

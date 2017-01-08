@@ -4,11 +4,13 @@
 #
 # See documentation in:
 # http://doc.scrapy.org/en/latest/topics/items.html
+from scrapy import Field, Item
 
-import scrapy
 
-
-class Scrapy2DmbjMongodbItem(scrapy.Item):
-    # define the fields for your item here like:
-    # name = scrapy.Field()
-    pass
+class Scrapy2DmbjMongodbItem(Item):
+    bookName = Field()
+    bookTitle = Field()
+    # chapterNum = Field()
+    # chapterName = Field()
+    chapterURL = Field()
+    contentText = Field()
