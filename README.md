@@ -9,7 +9,7 @@
    * 通过设置USER_AGENT，伪装成浏览器访问，绕过站点反爬机制
    * //div[@class="info"]：表示 **所有节点下** class 是 'info' 的 div 节点
    * div[@class="hd"]：表示 **某个节点下** class 是 'hd' 的 div 节点
-   * 运行爬虫使用 `scrapy crawl doubanTop250`，doubanTop250代表爬虫的名称，是spiders/doubanTop250.py中的类`class doubanTop250(CrawlSpider):`
+   * 运行爬虫使用 `scrapy crawl doubanTop250`，doubanTop250代表爬虫的名称，是spiders/doubanTop250.py中类`class doubanTop250(CrawlSpider):`中的`name`的名称
 2. daomubiji+mongodb
    * mongodb是一个非关系型数据库，在scrapy中的体现是：items代表一个数据模型，所有的字段都直接放在模型下，同一个模型（document）中字段之间无父子关系
 
