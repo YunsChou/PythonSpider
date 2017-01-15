@@ -66,9 +66,14 @@ DOWNLOAD_DELAY = 2
 
 # Configure item pipelines
 # See http://scrapy.readthedocs.org/en/latest/topics/item-pipeline.html
-#ITEM_PIPELINES = {
-#    'Scrapy1_doubanTop250.pipelines.SomePipeline': 300,
-#}
+ITEM_PIPELINES = {
+   'Scrapy1_doubanTop250.pipelines.Scrapy1Doubantop250Pipeline': 300
+}
+
+MONGODB_HOST = '127.0.0.1'
+MONGODB_PORT = '27017'
+MONGODB_DBNAME = 'movie'
+MONGODB_DOCNAME = 'doubanTop250'
 
 # Enable and configure the AutoThrottle extension (disabled by default)
 # See http://doc.scrapy.org/en/latest/topics/autothrottle.html

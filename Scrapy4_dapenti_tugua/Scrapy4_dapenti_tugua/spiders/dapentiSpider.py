@@ -14,11 +14,11 @@ class dapentiSpider(CrawlSpider):
 		url = 'http://www.dapenti.com/blog/blog.asp?name=xilei&subjectid=70&page=1'
 		selector = Selector(response)
 		print('-----------------------------------')
-		uls = selector.xpath('//div[@align="left"]/ul/li/a')
-		for ul in uls:
+		aNodes = selector.xpath('//div[@align="left"]/ul/li/a')
+		for aNode in aNodes:
 			item = Scrapy4DapentiTuguaItem()
-			item['title'] = ul.xpath('text()').extract()[0]
-			href = ul.xpath('@href').extract()[0]
+			item['title'] = aNode.xpath('text()').extract()[0]
+			href = aNode.xpath('@href').extract()[0]
 			detail_url = urllib.parse.urljoin(url, href)
 			yield Request(detail_url, callback = self.parseContent, meta = {'item' : item})
 			# yield item

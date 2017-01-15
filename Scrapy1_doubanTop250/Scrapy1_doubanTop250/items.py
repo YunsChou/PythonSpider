@@ -12,6 +12,7 @@ class Scrapy1Doubantop250Item(Item):
     # define the fields for your item here like:
     # name = scrapy.Field()
     title = Field()
-    movieInfo = Field()
+    info = Field()
     star = Field()
     quote = Field()
+    imgsrc = Field()
