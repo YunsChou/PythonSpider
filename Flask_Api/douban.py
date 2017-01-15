@@ -1,6 +1,7 @@
 
 from flask import Flask, jsonify
 import pymongo
+from bson import json_util
 
 client = pymongo.MongoClient()
 tdb = client["movie"]
@@ -15,11 +16,13 @@ def sayHello():
 @app.route('/movie')
 def doubanMovie():
 	result = doc.find().skip(0).limit(10)
-	items = []
-	for item in result:
-		print(dict(item))
-		items.append({'title':item['title'],'imgsrc':item['imgsrc'], 'quote':item['quote']})
-	return jsonify(items)
+	return json_util.dumps(list(result))
+	# items = []
+	# for item in result:
+	# 	print(dict(item))
+	# 	items.append({'title':item['title'],'imgsrc':item['imgsrc'], 'quote':item['quote']})
+	# print (json_util.dumps(list(result)))
+	# return jsonify(items)
 
 if __name__ == '__main__':
 	app.run()
