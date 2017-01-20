@@ -64,9 +64,14 @@ DOWNLOAD_DELAY = 2
 
 # Configure item pipelines
 # See http://scrapy.readthedocs.org/en/latest/topics/item-pipeline.html
-#ITEM_PIPELINES = {
-#    'Scrapy4_dapenti_tugua.pipelines.SomePipeline': 300,
-#}
+ITEM_PIPELINES = {
+   'Scrapy4_dapenti_tugua.pipelines.Scrapy4DapentiTuguaPipeline': 300
+}
+
+MONGODB_HOST = '127.0.0.1'
+MONGODB_PORT = '27017'
+MONGODB_DBNAME = 'dapenti'
+MONGODB_DOCNAME = 'tugua'
 
 # Enable and configure the AutoThrottle extension (disabled by default)
 # See http://doc.scrapy.org/en/latest/topics/autothrottle.html

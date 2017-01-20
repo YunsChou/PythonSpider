@@ -53,8 +53,14 @@ DOWNLOAD_DELAY = 2
 # Enable or disable downloader middlewares
 # See http://scrapy.readthedocs.org/en/latest/topics/downloader-middleware.html
 #DOWNLOADER_MIDDLEWARES = {
-#    'Scrapy5_dapenti_yitu.middlewares.MyCustomDownloaderMiddleware': 543,
-#}
+ITEM_PIPELINES = {
+   'Scrapy5_dapenti_yitu.pipelines.Scrapy5DapentiYituPipeline': 300
+}
+
+MONGODB_HOST = '127.0.0.1'
+MONGODB_PORT = '27017'
+MONGODB_DBNAME = 'dapenti'
+MONGODB_DOCNAME = 'yitu'
 
 # Enable or disable extensions
 # See http://scrapy.readthedocs.org/en/latest/topics/extensions.html

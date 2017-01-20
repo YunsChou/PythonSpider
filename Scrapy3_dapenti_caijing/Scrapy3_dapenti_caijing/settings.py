@@ -66,9 +66,15 @@ DOWNLOAD_DELAY = 1
 
 # Configure item pipelines
 # See http://scrapy.readthedocs.org/en/latest/topics/item-pipeline.html
-#ITEM_PIPELINES = {
-#    'Scrapy3_dapenti_caijing.pipelines.SomePipeline': 300,
-#}
+
+ITEM_PIPELINES = {
+   'Scrapy3_dapenti_caijing.pipelines.Scrapy3DapentiCaijingPipeline': 300
+}
+
+MONGODB_HOST = '127.0.0.1'
+MONGODB_PORT = '27017'
+MONGODB_DBNAME = 'dapenti'
+MONGODB_DOCNAME = 'caijing'
 
 # Enable and configure the AutoThrottle extension (disabled by default)
 # See http://doc.scrapy.org/en/latest/topics/autothrottle.html

@@ -2,6 +2,7 @@
 from flask import Flask, jsonify
 import pymongo
 from bson import json_util
+#http://api.mongodb.com/python/current/api/bson/json_util.html
 
 client = pymongo.MongoClient()
 tdb = client["movie"]
@@ -16,7 +17,10 @@ def sayHello():
 @app.route('/movie')
 def doubanMovie():
 	result = doc.find().skip(0).limit(10)
-	return json_util.dumps(list(result))
+	print(type(result))
+	# 推荐：使用bson将mongo中的数据转为json
+	return json_util.dumps(result)
+	# 测试：使用jsonify处理mongo中的数据转为json
 	# items = []
 	# for item in result:
 	# 	print(dict(item))
