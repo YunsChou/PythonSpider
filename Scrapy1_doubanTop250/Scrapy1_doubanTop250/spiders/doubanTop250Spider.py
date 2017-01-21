@@ -5,7 +5,7 @@ from scrapy.selector import Selector
 from Scrapy1_doubanTop250.items import Scrapy1Doubantop250Item
 
 class doubanTop250(CrawlSpider):
-	name = 'doubanTop250'
+	name = 'douban'
 	start_urls = ['https://movie.douban.com/top250']
 
 	url = 'https://movie.douban.com/top250'

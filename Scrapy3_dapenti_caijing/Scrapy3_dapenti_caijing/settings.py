@@ -14,8 +14,8 @@ BOT_NAME = 'Scrapy3_dapenti_caijing'
 SPIDER_MODULES = ['Scrapy3_dapenti_caijing.spiders']
 NEWSPIDER_MODULE = 'Scrapy3_dapenti_caijing.spiders'
 
-FEED_URI = '/Users/yuns/Desktop/Python/PythonSpider/caijing.csv'
-FEED_FORMAT = 'CSV'
+# FEED_URI = '/Users/yuns/Desktop/Python/PythonSpider/caijing.csv'
+# FEED_FORMAT = 'CSV'
 
 # Crawl responsibly by identifying yourself (and your website) on the user-agent
 USER_AGENT = 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_8_3) AppleWebKit/536.5 (KHTML, like Gecko) Chrome/19.0.1084.54 Safari/536.5'
